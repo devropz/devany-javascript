@@ -67,11 +67,45 @@
       return fullName; 
     }
      
-     console.log(makeName("My", "Whole", "Name"))
-     console.log(makeName("Devany", "P", "Rodriguez"))
-     console.log(makeName("Robert", "\"Beto\"", "O'Rourke"))
+     console.log(makeName("My", "Whole", "Name"));
+     console.log(makeName("Devany", "P", "Rodriguez"));
+     console.log(makeName("Robert", "\"Beto\"", "O'Rourke"));
+     
+     //Make a name with middle initial
+     function makeBetterName(firstName, middleName, lastName) {
+        if (middleName.length === 1) {
+          //adding and updating here
+          middleName = middleName + ".";
+          let fullName = firstName + " " + middleName + " " + lastName
+          return fullName;
+      } else {
+          //modifications here
+          let fullName = firstName + " " + middleName + " " + lastName
+          return fullName;  
+        }
+      }
+
+    console.log(makeBetterName("Devany", "Paola", "Rodriguez"));
+    console.log(makeBetterName("Devany", "P", "Rodriguez"));
+
+      //Flow control fxns on your own
+      function gameResult (homeScore, awayScore) {
+        if (homeScore > awayScore ) {
+          return 'The home team won';
+        } else if (homeScore === awayScore) {
+          return 'They tied';
+        } else {
+          return 'The away team won';
+        }
+       }
+
+       console.log(gameResult(4,7))
+       console.log(gameResult(14,7))
+       console.log(gameResult(7,7))
 
 
+
+       
     </script>
 </body>
 </html>
